@@ -2,7 +2,7 @@ package me.gorbuvla.events.flow.detail
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import me.gorbuvla.core.domain.Event
+import me.gorbuvla.domain.domain.Event
 import me.gorbuvla.events.databinding.FragmentEventDetailBinding
 import me.gorbuvla.ui.fragment.ViewBindingFragment
 

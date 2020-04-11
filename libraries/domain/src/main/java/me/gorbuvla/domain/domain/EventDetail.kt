@@ -1,4 +1,4 @@
-package me.gorbuvla.core.domain
+package me.gorbuvla.domain.domain
 
 /**
  * TODO add class description
