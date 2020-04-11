@@ -1,6 +1,6 @@
 package me.gorbuvla.events.di
 
-import me.gorbuvla.core.di.domainModule
+import me.gorbuvla.domain.di.domainModule
 import org.koin.dsl.module
 
 val featureModule = module {

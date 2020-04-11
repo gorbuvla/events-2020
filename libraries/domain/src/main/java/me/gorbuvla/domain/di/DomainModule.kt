@@ -1,4 +1,4 @@
-package me.gorbuvla.core.di
+package me.gorbuvla.domain.di
 
 import org.koin.dsl.module
 
