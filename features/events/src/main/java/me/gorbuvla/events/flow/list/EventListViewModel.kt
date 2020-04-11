@@ -34,7 +34,7 @@ class EventListViewModel(private val repository: EventRepository) : ViewModel() 
         loadLatest()
     }
 
-    fun toggle(category: EventCategory) = state.toggleCategory(category)
+    fun toggle(category: EventType) = state.toggleCategory(category)
 
     private fun loadLatest() {
         launch {
@@ -45,11 +45,11 @@ class EventListViewModel(private val repository: EventRepository) : ViewModel() 
         }
     }
 
-    private fun MutableLiveData<State<List<EventCategory>>>.toggleCategory(category: EventCategory) {
+    private fun MutableLiveData<State<List<EventCategory>>>.toggleCategory(type: EventType) {
         val currentValue = value
         if (currentValue != null && currentValue is State.Loaded) {
             value = State.Loaded(
-                currentValue.data.map { if (it.type == category.type) it.copy(isExpanded = !it.isExpanded) else it }
+                currentValue.data.map { if (it.type == type) it.copy(isExpanded = !it.isExpanded) else it }
             )
         }
     }
@@ -68,7 +68,8 @@ data class EventCategory(
 
 val EventType.title: Text
     get() = when (this) {
-        EventType.CONFERENCE -> Text.Raw("Conference")
-        EventType.CONCERT -> Text.Raw("Concert")
+        EventType.CONFERENCE -> Text.Raw("Conferences")
+        EventType.CONCERT -> Text.Raw("Concerts")
         EventType.TRAVEL -> Text.Raw("Flex & Chill")
+        EventType.MOVIE -> Text.Raw("Movies")
     }

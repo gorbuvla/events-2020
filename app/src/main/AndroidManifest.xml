@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="me.gorbuvla.events2020">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="me.gorbuvla.events2020">
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name="me.gorbuvla.events2020.EventsApp"
@@ -19,5 +20,4 @@
             </intent-filter>
         </activity>
     </application>
-
 </manifest>

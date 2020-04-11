@@ -14,14 +14,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginVertical="@dimen/space_small"/>
+        android:layout_marginVertical="@dimen/space_small"
+        android:layout_marginStart="@dimen/space_default" />
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginStart="@dimen/space_default"
-        android:layout_marginEnd="@dimen/space_small"
+        android:layout_marginHorizontal="@dimen/space_default"
         app:layout_constraintStart_toEndOf="@id/event_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:gravity="start"
             style="@style/TextSubtitle2"
-            tools:text="WE - S 1882 E"/>
+            tools:text="Event" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/subtitle_text"
@@ -41,9 +41,9 @@
             android:layout_height="wrap_content"
             android:gravity="start"
             style="@style/TextBody2"
-            android:maxLines="1"
+            android:maxLines="3"
             android:ellipsize="end"
             android:textColor="@color/colorOnSurfaceMediumEmphasis"
-            tools:text="Distance: 700m"/>
+            tools:text="Description"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

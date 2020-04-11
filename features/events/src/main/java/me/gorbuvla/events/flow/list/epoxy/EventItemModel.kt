@@ -2,6 +2,7 @@ package me.gorbuvla.events.flow.list.epoxy
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import coil.api.load
 import com.airbnb.epoxy.EpoxyAttribute
 import me.gorbuvla.domain.domain.Event
 import me.gorbuvla.events.databinding.LayoutEventItemBinding
@@ -25,6 +26,8 @@ open class EventItemModel : EpoxyModelWithBinding<LayoutEventItemBinding>() {
     override fun LayoutEventItemBinding.bind() {
         titleText.text = event.title
         subtitleText.text = event.description
+
+        eventImage.load(event.image)
 
         root.setOnClickListener {
             onEventClick(event)
