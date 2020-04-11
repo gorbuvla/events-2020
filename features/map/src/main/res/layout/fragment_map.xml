@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="end">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/map_coordinator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:theme="@style/Theme.Default">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="MAP" />
+
+<!--        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--            android:id="@+id/fab_filter"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="@dimen/space_default"-->
+<!--            android:layout_marginEnd="@dimen/space_default"-->
+<!--            android:src="@drawable/ic_filter_menu"-->
+<!--            app:fabSize="mini"-->
+<!--            android:layout_gravity="top|end"/>-->
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+<!--    <fragment-->
+<!--        android:id="@+id/menu"-->
+<!--        android:name="com.we.share.map.flow.filter.FilterFragment"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_gravity="end"/>-->
+</androidx.drawerlayout.widget.DrawerLayout>

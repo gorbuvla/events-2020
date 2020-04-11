@@ -1,0 +1,42 @@
+apply plugin: 'com.android.library'
+apply from: '../../gradle/common.gradle'
+apply plugin: 'kotlin-kapt'
+
+android {
+    viewBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    implementation project(':libraries:domain')
+    implementation project(":libraries:ui")
+
+    implementation "androidx.appcompat:appcompat:$appcompat_version"
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:$swipe_refresh_version"
+    implementation "androidx.core:core-ktx:$core_ktx_version"
+    implementation "androidx.constraintlayout:constraintlayout:$constraint_layout_version"
+
+    implementation "com.google.android.material:material:$material_version"
+    implementation "androidx.fragment:fragment-ktx:$fragment_version"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+
+    implementation "cz.ackee.extensions:android:$ackee_extensions_version"
+
+    implementation "io.github.reactivecircus.flowbinding:flowbinding-android:$flowbinding_version"
+    implementation "io.github.reactivecircus.flowbinding:flowbinding-material:$flowbinding_version"
+
+    implementation "org.koin:koin-android:$koin_version"
+    implementation "org.koin:koin-androidx-scope:$koin_version"
+    implementation "org.koin:koin-androidx-viewmodel:$koin_version"
+
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
+    implementation "com.jakewharton.timber:timber:$timber_version"
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.2.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}

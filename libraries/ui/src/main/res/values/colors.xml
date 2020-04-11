@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorWhite">@android:color/white</color>
+    <color name="colorBlack">@android:color/black</color>
+    <color name="colorLightBlue">#002aff</color>
+    <color name="colorMediumBlue">#002BFF</color>
+    <color name="colorDarkBlue">#0000ca</color>
+    <color name="colorDarkGreen">#6FC1A5</color>
+    <color name="colorDarkGrey">#1d1d1d</color>
+    <color name="colorVeryDarkGey">#DE000000</color>
+    <color name="colorTransparentGrey">#a6ffffff</color>
+    <color name="colorMonza">#B00020</color>
+    <color name="colorAlto">#DDDDDD</color>
+    <color name="colorEucalyptus">#289E50</color>
+
+    <color name="colorPrimary">@color/colorLightBlue</color>
+    <color name="colorPrimaryDark">@color/colorDarkBlue</color>
+    <color name="colorOnPrimary">@color/colorWhite</color>
+    <color name="colorFabBackground">@color/colorWhite</color>
+    <color name="colorSecondary">@color/colorDarkGreen</color>
+    <color name="colorOnSecondary">@color/colorPrimaryDark</color>
+    <color name="colorSurface">@color/colorWhite</color>
+    <color name="colorOnSurface">#D9000000</color>
+    <color name="colorOnSurfaceMediumEmphasis">#99000000</color>
+
+    <color name="colorDisabled">#E9E9E9</color>
+    <color name="colorEnabled">#646464</color>
+    <color name="colorSelected">#000000</color>
+</resources>

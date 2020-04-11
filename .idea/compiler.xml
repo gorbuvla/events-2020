@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="app" target="1.8" />
+      <module name="Missed_Places.app" target="1.8" />
+      <module name="Missed_Places.features.map" target="1.8" />
+      <module name="Missed_Places.features.places" target="1.8" />
+      <module name="Missed_Places.libraries.core" target="1.8" />
+      <module name="Missed_Places.libraries.navigation" target="1.8" />
+      <module name="Missed_Places.libraries.ui" target="1.8" />
+      <module name="Missed_Places.map" target="1.8" />
+      <module name="Missed_Places.ui" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

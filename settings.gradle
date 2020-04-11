@@ -1,0 +1,8 @@
+rootProject.name = "Events 2020"
+include ':app'
+
+include ':features:events'
+include ':features:map'
+include ':libraries:domain'
+include ':libraries:navigation'
+include ':libraries:ui'

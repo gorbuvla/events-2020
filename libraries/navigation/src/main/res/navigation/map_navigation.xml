@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map_navigation"
+    app:startDestination="@id/map_dest">
+
+    <include app:graph="@navigation/event_navigation" />
+
+    <fragment
+        android:id="@+id/map_dest"
+        android:name="me.gorbuvla.map.flow.map.EventMapFragment"
+        tools:layout="@layout/fragment_map">
+
+        <action
+            android:id="@+id/open_event_detail"
+            app:destination="@id/event_navigation"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+</navigation>
