@@ -10,7 +10,7 @@
         android:name="me.gorbuvla.navigation.utils.BlankFragment">
 
         <action
-            android:id="@+id/open_tour_detail"
+            android:id="@+id/open_event_detail"
             app:destination="@id/event_detail"
             app:popUpTo="@id/event_navigation"
             app:popUpToInclusive="true" />

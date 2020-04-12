@@ -1,5 +1,6 @@
 package me.gorbuvla.domain.data
 
+import me.gorbuvla.domain.domain.Address
 import me.gorbuvla.domain.domain.Coordinate
 import me.gorbuvla.domain.domain.Event
 import me.gorbuvla.domain.domain.EventType
@@ -13,7 +14,10 @@ val conferences = listOf(
         description = "Important",
         image = "https://storage.googleapis.com/io-2018.appspot.com/2020/assets/meta/social-share.jpg",
         type = EventType.CONFERENCE,
-        location = Coordinate(37.4043677,-122.162594)
+        address = Address(
+            name = "Shoreline Amphitheatre, Palo Alto",
+            location = Coordinate(37.4043677,-122.162594)
+        )
     ),
     Event(
         id = "android-makers",
@@ -21,7 +25,10 @@ val conferences = listOf(
         description = "Oulala",
         image = "https://androidmakers.fr/images/social-share.jpg",
         type = EventType.CONFERENCE,
-        location = Coordinate(48.818537,2.3175953)
+        address = Address(
+            name = "Beffroi de Montrouge, Paris",
+            location = Coordinate(48.818537,2.3175953)
+        )
     ),
     Event(
         id = "frenchkit",
@@ -29,7 +36,10 @@ val conferences = listOf(
         description = "Oulala, but 4x more expensive",
         image = "https://frenchkit.fr/wp-content/uploads/2019/02/frenchkit-d-beffroi.jpg",
         type = EventType.CONFERENCE,
-        location = Coordinate(48.819017,2.3191865)
+        address = Address(
+            name = "Beffroi de Montrouge, Paris",
+            location = Coordinate(48.819017,2.3191865)
+        )
     ),
     Event(
         id = "mDevCamp",
@@ -37,7 +47,10 @@ val conferences = listOf(
         description = "My chance to see local superstar David Bilik",
         image = "https://mdevcamp.eu/images/og-mdevcamp-banner.png",
         type = EventType.CONFERENCE,
-        location = Coordinate(50.062033,14.4263173)
+        address = Address(
+            name = "Prague Congress Centre, Prague",
+            location = Coordinate(50.062033,14.4263173)
+        )
     ),
     Event(
         id = "droidcon",
@@ -45,7 +58,10 @@ val conferences = listOf(
         description = "Return of the eastern spy",
         image = "https://static.wixstatic.com/media/6e1ab2_ea2f884b8f8948cf8977aec76cfb0297~mv2.png/v1/fill/w_1958,h_526,al_c,q_90,usm_0.66_1.00_0.01/BER_20_Place_Web_Hero.webp",
         type = EventType.CONFERENCE,
-        location = Coordinate(52.5002212,13.2685643)
+        address = Address(
+            name = "City Cube, Berlin",
+            location = Coordinate(52.5002212,13.2685643)
+        )
     )
 )
 
@@ -56,7 +72,10 @@ val concerts = listOf(
         description = "Alternative/Indie, Contemporary folk, Soul",
         image = "https://i.ytimg.com/vi/aMZ4QL0orw0/maxresdefault.jpg",
         type = EventType.CONCERT,
-        location = Coordinate(50.0914263,14.4526273)
+        address = Address(
+            name = "Forum Karlín, Prague",
+            location = Coordinate(50.0914263,14.4526273)
+        )
     )
 )
 
@@ -67,7 +86,10 @@ val travel = listOf(
         description = "Tyvolena",
         image = "https://images.adsttc.com/media/images/5d01/5079/284d/d16c/8700/00bb/slideshow/Barcelona_Architecture-Virginia_Duran-6-Sagrada_Familia.jpg?1560367212",
         type = EventType.TRAVEL,
-        location = Coordinate(41.3947688,2.0787279)
+        address = Address(
+            name = "Barcelona",
+            location = Coordinate(41.3947688,2.0787279)
+        )
     )
 )
 
@@ -78,7 +100,10 @@ val movies = listOf(
         description = "80ies soundtrack, just like in Atomic Blonde",
         image = "https://cdn.collider.com/wp-content/uploads/2020/01/wonder-woman-84-image-gal-gadot-slice.jpeg",
         type = EventType.MOVIE,
-        location = Coordinate(50.0870919,14.4265526)
+        address = Address(
+            name = "Cinema",
+            location = Coordinate(50.0870919,14.4265526)
+        )
     ),
     Event(
         id = "tenet",
@@ -86,6 +111,9 @@ val movies = listOf(
         description = "Lets support infamous directors",
         image = "https://m.media-amazon.com/images/M/MV5BNWIwNzZmZDgtNDcxZi00YTFlLWJhYzktOGI5MTM4MzBjYWJkXkEyXkFqcGdeQWpnYW1i._V1_UX477_CR0,0,477,268_AL_.jpg",
         type = EventType.MOVIE,
-        location = Coordinate(50.0782697,14.4624103)
+        address = Address(
+            name = "Cinema",
+            location = Coordinate(50.0782697,14.4624103)
+        )
     )
 )

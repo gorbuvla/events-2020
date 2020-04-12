@@ -3,7 +3,6 @@ package me.gorbuvla.events.flow.list
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
-import me.gorbuvla.domain.domain.Event
 import me.gorbuvla.events.databinding.FragmentEventListBinding
 import me.gorbuvla.events.flow.list.epoxy.EventListEpoxyController
 import me.gorbuvla.ui.fragment.ViewBindingFragment
@@ -16,8 +15,7 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 class EventListFragment : ViewBindingFragment<FragmentEventListBinding>() {
 
     interface NavigationDelegate {
-
-        fun open(event: Event)
+        fun open(eventId: String)
     }
 
     private val delegate: NavigationDelegate by flow()
@@ -25,7 +23,7 @@ class EventListFragment : ViewBindingFragment<FragmentEventListBinding>() {
     private val controller: EventListEpoxyController by lazy {
         EventListEpoxyController(
             onToggleCategory = { viewModel.toggle(it) },
-            onEventClick = { delegate.open(it) }
+            onEventClick = { delegate.open(it.id) }
         )
     }
 

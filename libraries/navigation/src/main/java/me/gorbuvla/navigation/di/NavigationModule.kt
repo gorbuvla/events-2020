@@ -26,7 +26,7 @@ val navigationModule = module {
     }
 
     scope(named(EventFlowActivity.SCOPE_NAME)) {
-        scoped { (eventId: String) ->
+        scoped {
             EventFlowCoordinatorImpl()
         } binds arrayOf(
             EventDetailFragment.NavigationDelegate::class

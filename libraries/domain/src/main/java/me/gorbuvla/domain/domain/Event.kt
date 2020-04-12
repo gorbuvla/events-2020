@@ -9,6 +9,11 @@ data class Event(
     val description: String,
     val image: String,
     val type: EventType,
+    val address: Address
+)
+
+data class Address(
+    val name: String,
     val location: Coordinate
 )
 
@@ -16,4 +21,3 @@ enum class EventType {
 
     CONFERENCE, TRAVEL, CONCERT, MOVIE
 }
-

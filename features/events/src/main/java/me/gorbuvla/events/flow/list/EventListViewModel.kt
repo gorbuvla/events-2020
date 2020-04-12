@@ -62,7 +62,7 @@ private val List<Event>.categories: List<EventCategory>
 
 data class EventCategory(
     val type: EventType,
-    val tickets: List<Event>,
+    val events: List<Event>,
     val isExpanded: Boolean
 )
 

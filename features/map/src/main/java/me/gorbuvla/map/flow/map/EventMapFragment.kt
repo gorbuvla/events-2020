@@ -2,6 +2,7 @@ package me.gorbuvla.map.flow.map
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import me.gorbuvla.domain.domain.Coordinate
 import me.gorbuvla.map.databinding.FragmentMapBinding
 import me.gorbuvla.ui.fragment.ViewBindingFragment
 
@@ -11,7 +12,8 @@ import me.gorbuvla.ui.fragment.ViewBindingFragment
 class EventMapFragment : ViewBindingFragment<FragmentMapBinding>() {
 
     interface NavigationDelegate {
-        fun openEvent()
+        fun open(eventId: String)
+        fun navigate(coordinate: Coordinate)
     }
 
     override fun provideBinding(inflater: LayoutInflater, container: ViewGroup?): FragmentMapBinding {
