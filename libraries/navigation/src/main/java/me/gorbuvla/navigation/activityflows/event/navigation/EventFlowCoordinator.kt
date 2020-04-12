@@ -30,6 +30,8 @@ interface EventFlowCoordinator : FlowCoordinator, EventDetailFragment.Navigation
             override val intent: Intent
                 get() = Intent(Intent.ACTION_VIEW, Uri.parse("google.navigation:q=${coordinate.latitude},${coordinate.longitude}"))
         }
+
+        data class Website(override val url: String) : Link()
     }
 }
 
@@ -44,6 +46,10 @@ class EventFlowCoordinatorImpl : EventFlowCoordinator {
 
     override fun navigate(coordinate: Coordinate) {
         navigateTo(EventFlowCoordinator.Page.Maps(coordinate))
+    }
+
+    override fun openLink(url: String) {
+        navigateTo(EventFlowCoordinator.Page.Website(url))
     }
 
     override fun navigateUp() {

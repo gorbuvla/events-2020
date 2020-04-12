@@ -9,7 +9,8 @@ data class Event(
     val description: String,
     val image: String,
     val type: EventType,
-    val address: Address
+    val address: Address,
+    val url: String
 )
 
 data class Address(

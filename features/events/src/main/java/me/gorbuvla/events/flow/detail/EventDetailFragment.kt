@@ -1,12 +1,12 @@
 package me.gorbuvla.events.flow.detail
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.ViewGroup
+import android.view.*
 import androidx.core.os.bundleOf
 import androidx.lifecycle.Observer
 import me.gorbuvla.domain.domain.Coordinate
 import me.gorbuvla.domain.domain.Event
+import me.gorbuvla.events.R
 import me.gorbuvla.events.databinding.FragmentEventDetailBinding
 import me.gorbuvla.events.flow.detail.epoxy.EventDetailEpoxyController
 import me.gorbuvla.ui.fragment.BaseActionDelegate
@@ -35,6 +35,7 @@ class EventDetailFragment : ViewBindingFragment<FragmentEventDetailBinding>() {
     }
 
     interface NavigationDelegate : BaseActionDelegate {
+        fun openLink(url: String)
         fun navigate(coordinate: Coordinate)
         fun open(eventId: String)
     }
@@ -49,6 +50,7 @@ class EventDetailFragment : ViewBindingFragment<FragmentEventDetailBinding>() {
     }
 
     override val hasBackNavigation: Boolean = true
+    override val hasToolbarMenu: Boolean = true
 
     override fun provideBinding(inflater: LayoutInflater, container: ViewGroup?): FragmentEventDetailBinding {
         return FragmentEventDetailBinding.inflate(inflater, container, false)
@@ -70,5 +72,20 @@ class EventDetailFragment : ViewBindingFragment<FragmentEventDetailBinding>() {
             toolbar.title = event.title
             controller.setData(event, similar)
         })
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.menu_event, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val event = viewModel.event.value?.event
+        if (item.itemId == R.id.open_link && event != null) {
+            delegate.openLink(event.url)
+            return true
+        }
+
+        return super.onOptionsItemSelected(item)
     }
 }

@@ -17,7 +17,8 @@ val conferences = listOf(
         address = Address(
             name = "Shoreline Amphitheatre, Palo Alto",
             location = Coordinate(37.4043677,-122.162594)
-        )
+        ),
+        url = "https://events.google.com/io/"
     ),
     Event(
         id = "android-makers",
@@ -28,7 +29,8 @@ val conferences = listOf(
         address = Address(
             name = "Beffroi de Montrouge, Paris",
             location = Coordinate(48.818537,2.3175953)
-        )
+        ),
+        url = "https://androidmakers.fr/"
     ),
     Event(
         id = "frenchkit",
@@ -39,7 +41,8 @@ val conferences = listOf(
         address = Address(
             name = "Beffroi de Montrouge, Paris",
             location = Coordinate(48.819017,2.3191865)
-        )
+        ),
+        url = "https://frenchkit.fr/"
     ),
     Event(
         id = "mDevCamp",
@@ -50,7 +53,8 @@ val conferences = listOf(
         address = Address(
             name = "Prague Congress Centre, Prague",
             location = Coordinate(50.062033,14.4263173)
-        )
+        ),
+        url = "https://mdevcamp.eu/"
     ),
     Event(
         id = "droidcon",
@@ -61,7 +65,8 @@ val conferences = listOf(
         address = Address(
             name = "City Cube, Berlin",
             location = Coordinate(52.5002212,13.2685643)
-        )
+        ),
+        url = "https://www.berlin.droidcon.com/"
     )
 )
 
@@ -75,7 +80,8 @@ val concerts = listOf(
         address = Address(
             name = "Forum Karlín, Prague",
             location = Coordinate(50.0914263,14.4526273)
-        )
+        ),
+        url = "https://goout.net/en/concerts/michael-kiwanuka/hgvhf/+vdinp/"
     )
 )
 
@@ -89,7 +95,8 @@ val travel = listOf(
         address = Address(
             name = "Barcelona",
             location = Coordinate(41.3947688,2.0787279)
-        )
+        ),
+        url = "https://www.barcelona.com/"
     )
 )
 
@@ -103,7 +110,8 @@ val movies = listOf(
         address = Address(
             name = "Cinema",
             location = Coordinate(50.0870919,14.4265526)
-        )
+        ),
+        url = "https://www.imdb.com/title/tt7126948/"
     ),
     Event(
         id = "tenet",
@@ -114,6 +122,7 @@ val movies = listOf(
         address = Address(
             name = "Cinema",
             location = Coordinate(50.0782697,14.4624103)
-        )
+        ),
+        url = "https://www.imdb.com/title/tt6723592/"
     )
 )
