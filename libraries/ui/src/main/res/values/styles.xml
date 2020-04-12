@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Default App Theme -->
+    <style name="Theme.Default" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorOnSecondary">@color/colorBlack</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor">@color/colorSurface</item>
+        <item name="android:statusBarColor">@color/colorSurface</item>
+        <item name="colorSurface">@color/colorSurface</item>
+        <item name="colorOnSurface">@color/colorOnSurface</item>
+        <item name="floatingActionButtonStyle">@style/Theme.Default.FloatingActionButton</item>
+        <item name="bottomNavigationStyle">@style/Theme.Default.BottomNavigation</item>
+        <item name="materialButtonStyle">@style/Widget.Custom.Button</item>
+    </style>
+
+    <style name="ThemeOverlay.Custom.Toolbar" parent="">
+        <item name="colorPrimary">?colorSurface</item>
+        <item name="colorOnPrimary">?colorOnSurface</item>
+        <item name="colorControlNormal">?colorOnSurface</item>
+        <item name="actionMenuTextColor">?colorOnSurface</item>
+    </style>
+
+    <style name="Theme.Default.FloatingActionButton" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="backgroundTint">@color/colorFabBackground</item>
+    </style>
+
+    <!-- Button Widget Style -->
+    <style name="Widget.Custom.Button" parent="Widget.MaterialComponents.Button">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.Custom.Button</item>
+    </style>
+
+    <!-- Rounded Button Appearance -->
+    <style name="ShapeAppearanceOverlay.Custom.Button" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <!-- Bottom Navigation Style -->
+    <style name="Theme.Default.BottomNavigation" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="itemIconTint">@drawable/bottom_navigation_color_selector</item>
+        <item name="itemTextColor">@drawable/bottom_navigation_color_selector</item>
+    </style>
+
+    <style name="Theme.Default.ProgressBar" parent="Widget.AppCompat.ProgressBar">
+        <item name="android:indeterminateTint">@color/colorOnSurface</item>
+    </style>
+
+    <style name="Theme.Default.ProgressBar.Horizontal" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:indeterminateTint">@color/colorOnSurface</item>
+    </style>
+</resources>

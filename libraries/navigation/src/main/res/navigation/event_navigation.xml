@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/event_navigation"
+    app:startDestination="@id/blank">
+
+    <fragment
+        android:id="@+id/blank"
+        android:name="me.gorbuvla.navigation.utils.BlankFragment">
+
+        <action
+            android:id="@+id/open_event_detail"
+            app:destination="@id/event_detail"
+            app:popUpTo="@id/event_navigation"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/event_detail"
+        android:name="me.gorbuvla.events.flow.detail.EventDetailFragment"
+        tools:layout="@layout/fragment_event_detail">
+    </fragment>
+</navigation>

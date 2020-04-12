@@ -1,0 +1,57 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext.kotlin_version = "1.3.71"
+    ext.ackee_extensions_version = '1.3.0'
+    ext.appcompat_version = '1.1.0'
+    ext.lifecycle_version = '2.2.0'
+    ext.core_ktx_version = '1.2.0'
+    ext.constraint_layout_version = '2.0.0-beta4'
+    ext.swipe_refresh_version = '1.1.0-beta01'
+    ext.epoxy_version = '3.9.0'
+    ext.fragment_version = '1.2.4'
+    ext.material_version = '1.2.0-alpha05'
+    ext.navigation_version = '2.2.1'
+    ext.flowbinding_version = '0.6.0'
+    ext.gms_version = '17.0.0'
+    ext.browser_version = '1.3.0-alpha01'
+    ext.coil_version = '0.9.5'
+
+    ext.koin_version = '2.1.5'
+
+    ext.map_utils_version = '0.6.2'
+
+    ext.coroutines_version = '1.3.3'
+
+    ext.okhttp3_version = '4.2.2'
+    ext.retrofit_version = '2.6.2'
+    ext.oauth_version = '1.0.1'
+    ext.moshi_version = '1.9.2'
+
+    ext.room_version = '2.2.3'
+    ext.timber_version = '4.7.1'
+
+    ext.coroutines_test_version = '1.3.2'
+    ext.preference_version = '1.1.0'
+    ext.flow_preferences_version = '1.0.0'
+
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:3.6.2"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

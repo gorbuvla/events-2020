@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorWhite">@android:color/white</color>
+    <color name="colorBlack">@android:color/black</color>
+    <color name="colorOrange">#FF6363</color>
+    <color name="colorGreen">#00BDAA</color>
+    <color name="colorDarkGreen">#6FC1A5</color>
+    <color name="colorDarkGray">#DE000000</color>
+
+    <color name="colorPrimary">@color/colorOrange</color>
+    <color name="colorPrimaryDark">@color/colorGreen</color>
+    <color name="colorOnPrimary">@color/colorWhite</color>
+    <color name="colorFabBackground">@color/colorWhite</color>
+    <color name="colorSecondary">@color/colorGreen</color>
+    <color name="colorSurface">@color/colorWhite</color>
+    <color name="colorOnSurface">#D9000000</color>
+    <color name="colorOnSurfaceMediumEmphasis">#99000000</color>
+
+    <color name="colorDisabled">#E9E9E9</color>
+    <color name="colorEnabled">#646464</color>
+    <color name="colorSelected">#000000</color>
+</resources>
