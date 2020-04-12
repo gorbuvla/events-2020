@@ -31,7 +31,7 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/menu"
-        android:name="me.gorbuvla.map.flow.filter.FiltersFragment"
+        android:name="me.gorbuvla.map.screens.filter.FiltersFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="end"/>

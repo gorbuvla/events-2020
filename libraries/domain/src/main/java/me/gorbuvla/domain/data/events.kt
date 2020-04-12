@@ -11,7 +11,7 @@ val conferences = listOf(
     Event(
         id = "google-io",
         title = "Google IO",
-        description = "Important",
+        description = "Yes, I was tossed. Text me if you want to support me morally",
         image = "https://storage.googleapis.com/io-2018.appspot.com/2020/assets/meta/social-share.jpg",
         type = EventType.CONFERENCE,
         address = Address(
@@ -47,7 +47,7 @@ val conferences = listOf(
     Event(
         id = "mDevCamp",
         title = "mDevCamp",
-        description = "My chance to see local superstar David Bilik",
+        description = "My chance to see local superstar David Bilik talking about modular architecture pitfalls",
         image = "https://mdevcamp.eu/images/og-mdevcamp-banner.png",
         type = EventType.CONFERENCE,
         address = Address(

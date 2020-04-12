@@ -9,7 +9,7 @@
 
     <fragment
         android:id="@+id/map_dest"
-        android:name="me.gorbuvla.map.flow.map.EventMapFragment"
+        android:name="me.gorbuvla.map.screens.map.EventMapFragment"
         tools:layout="@layout/fragment_map">
 
         <action
