@@ -11,7 +11,7 @@ Here I show my approach to navigation in multi-module Android app.
 
 | Map | List |  Detail |
 | --- | ---- | ------- |
-|<img src="https://github.com/gorbuvla/events-2020/screenshots/Screenshot_20200412-211239.png" height="400" alt="Screenshot"/> | <img src="https://github.com/gorbuvla/events-2020/screenshots/Screenshot_20200412-211202.png" height="400" alt="Screenshot"/>  | <img src="https://github.com/gorbuvla/events-2020/screenshots/Screenshot_20200412-211219.png" height="400" alt="Screenshot"/> |
+|<img src="screenshots/Screenshot_20200412-211239.png" height="400" alt="Screenshot"/> | <img src="screenshots/Screenshot_20200412-211202.png" height="400" alt="Screenshot"/>  | <img src="screenshots/Screenshot_20200412-211219.png" height="400" alt="Screenshot"/> |
 
 ## Git
 Wondering what all these emojis are? Checkout [gitmoji](https://gitmoji.carloscuesta.me/).
