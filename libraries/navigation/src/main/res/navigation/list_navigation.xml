@@ -9,7 +9,7 @@
 
     <fragment
         android:id="@+id/list_dest"
-        android:name="me.gorbuvla.events.flow.list.EventListFragment"
+        android:name="me.gorbuvla.events.screens.list.EventListFragment"
         tools:layout="@layout/fragment_event_list">
 
         <action

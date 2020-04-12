@@ -5,8 +5,7 @@ import android.net.Uri
 import android.os.Bundle
 import androidx.navigation.NavController
 import me.gorbuvla.domain.domain.Coordinate
-import me.gorbuvla.domain.domain.Event
-import me.gorbuvla.events.flow.detail.EventDetailFragment
+import me.gorbuvla.events.screens.detail.EventDetailFragment
 import me.gorbuvla.navigation.R
 import me.gorbuvla.navigation.coordinator.FlowCoordinator
 import me.gorbuvla.navigation.coordinator.NavigationPage

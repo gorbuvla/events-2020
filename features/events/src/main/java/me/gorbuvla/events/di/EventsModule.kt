@@ -1,8 +1,8 @@
 package me.gorbuvla.events.di
 
 import me.gorbuvla.domain.di.domainModule
-import me.gorbuvla.events.flow.detail.EventDetailViewModel
-import me.gorbuvla.events.flow.list.EventListViewModel
+import me.gorbuvla.events.screens.detail.EventDetailViewModel
+import me.gorbuvla.events.screens.list.EventListViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 

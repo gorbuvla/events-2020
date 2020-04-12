@@ -4,9 +4,8 @@ import android.content.Intent
 import android.net.Uri
 import androidx.navigation.NavController
 import me.gorbuvla.domain.domain.Coordinate
-import me.gorbuvla.domain.domain.Event
-import me.gorbuvla.events.flow.list.EventListFragment
-import me.gorbuvla.map.flow.map.EventMapFragment
+import me.gorbuvla.events.screens.list.EventListFragment
+import me.gorbuvla.map.screens.map.EventMapFragment
 import me.gorbuvla.navigation.activityflows.event.EventFlowActivity
 import me.gorbuvla.navigation.coordinator.FlowCoordinator
 import me.gorbuvla.navigation.coordinator.NavigationPage

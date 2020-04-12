@@ -2,8 +2,8 @@ package me.gorbuvla.map.di
 
 import me.gorbuvla.domain.di.domainModule
 import me.gorbuvla.domain.model.settings.SettingsConfig
-import me.gorbuvla.map.flow.filter.FiltersViewModel
-import me.gorbuvla.map.flow.map.EventMapViewModel
+import me.gorbuvla.map.screens.filter.FiltersViewModel
+import me.gorbuvla.map.screens.map.EventMapViewModel
 import me.gorbuvla.map.model.FilterRepository
 import me.gorbuvla.map.model.FilterRepositoryImpl
 import me.gorbuvla.map.model.POIRepository

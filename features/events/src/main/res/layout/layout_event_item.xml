@@ -22,6 +22,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginHorizontal="@dimen/space_default"
+        android:layout_marginVertical="@dimen/space_small"
         app:layout_constraintStart_toEndOf="@id/event_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
