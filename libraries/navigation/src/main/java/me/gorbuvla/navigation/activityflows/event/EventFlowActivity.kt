@@ -43,7 +43,7 @@ internal class EventFlowActivity : ViewBindingActivity<ActivityEventBinding>() {
         lifecycle.addObserver(navigator)
 
         if (savedInstanceState == null) {
-            navigator.open(eventId)
+            navigator.openInitial(eventId)
         }
     }
 

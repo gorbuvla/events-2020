@@ -20,5 +20,13 @@
         android:id="@+id/event_detail"
         android:name="me.gorbuvla.events.screens.detail.EventDetailFragment"
         tools:layout="@layout/fragment_event_detail">
+
+        <action
+            android:id="@+id/open_similar"
+            app:destination="@id/event_detail"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_exit_anim" />
     </fragment>
 </navigation>

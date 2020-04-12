@@ -22,6 +22,13 @@ interface EventFlowCoordinator : FlowCoordinator, EventDetailFragment.Navigation
                 get() = EventDetailFragment.arguments(eventId)
         }
 
+        data class SimilarDetail(val eventId: String) : NavigationPage.View() {
+            override val destination: Int
+                get() = R.id.open_similar
+            override val bundle: Bundle?
+                get() = EventDetailFragment.arguments(eventId)
+        }
+
         data class Maps(val coordinate: Coordinate) : NavigationPage.External() {
             override val intent: Intent
                 get() = Intent(Intent.ACTION_VIEW, Uri.parse("google.navigation:q=${coordinate.latitude},${coordinate.longitude}"))
@@ -36,8 +43,12 @@ class EventFlowCoordinatorImpl : EventFlowCoordinator {
 
     override var navigationController: NavController? = null
 
-    override fun open(eventId: String) {
+    fun openInitial(eventId: String) {
         navigateTo(EventFlowCoordinator.Page.EventDetail(eventId))
+    }
+
+    override fun open(eventId: String) {
+        navigateTo(EventFlowCoordinator.Page.SimilarDetail(eventId))
     }
 
     override fun navigate(coordinate: Coordinate) {
