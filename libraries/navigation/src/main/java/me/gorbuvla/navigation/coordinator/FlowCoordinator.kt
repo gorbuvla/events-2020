@@ -28,18 +28,10 @@ interface FlowCoordinator : DefaultLifecycleObserver {
 
     fun finish() {
         activity?.finish()
-//        activity?.let {
-//            it.finish()
-//            it.flowScope.close()
-//        }
     }
 
     fun finishAffinity() {
         activity?.finishAffinity()
-//        activity?.let {
-//            it.finishAffinity()
-//            it.flowScope.close()
-//        }
     }
 
     fun navigateTo(page: NavigationPage) {
