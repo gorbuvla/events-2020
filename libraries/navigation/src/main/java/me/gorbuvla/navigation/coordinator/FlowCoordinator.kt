@@ -27,17 +27,11 @@ interface FlowCoordinator : DefaultLifecycleObserver {
     }
 
     fun finish() {
-        activity?.let {
-            it.finish()
-            it.flowScope.close()
-        }
+        activity?.finish()
     }
 
     fun finishAffinity() {
-        activity?.let {
-            it.finishAffinity()
-            it.flowScope.close()
-        }
+        activity?.finishAffinity()
     }
 
     fun navigateTo(page: NavigationPage) {

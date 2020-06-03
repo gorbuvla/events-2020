@@ -1,6 +1,6 @@
 # Events 2020
 
-[![jCenter](https://img.shields.io/badge/Kotlin-1.3.71-green.svg)]()
+[![jCenter](https://img.shields.io/badge/Kotlin-1.3.72-green.svg)]()
 
 ## Project
 Believe or not, 2020 supposed to be quite an interesting year for me in terms of traveling.

@@ -10,10 +10,10 @@ abstract class FlowActivity : AppCompatActivity() {
 
     abstract val flowScope: Scope
 
-//    override fun onDestroy() {
-//        super.onDestroy()
-//        if (!isChangingConfigurations && !flowScope.closed) {
-//            flowScope.close()
-//        }
-//    }
+    override fun onDestroy() {
+        super.onDestroy()
+        if (!isChangingConfigurations && !flowScope.closed) {
+            flowScope.close()
+        }
+    }
 }

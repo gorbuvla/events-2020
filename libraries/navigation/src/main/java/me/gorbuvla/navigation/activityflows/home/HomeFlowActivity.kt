@@ -21,7 +21,7 @@ class HomeFlowActivity : ViewBindingActivity<ActivityHomeBinding>() {
         const val SCOPE_NAME = "scope+home"
     }
 
-    private lateinit var navigator: HomeFlowCoordinatorImpl
+    private lateinit var flowCoordinator: HomeFlowCoordinatorImpl
 
     override val flowScope: Scope
         get() = getKoin().getOrCreateScope(SCOPE_NAME, named(SCOPE_NAME))
@@ -30,9 +30,9 @@ class HomeFlowActivity : ViewBindingActivity<ActivityHomeBinding>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        navigator = flowScope.get()
-        navigator.activity = this
-        lifecycle.addObserver(navigator)
+        flowCoordinator = flowScope.get()
+        flowCoordinator.activity = this
+        lifecycle.addObserver(flowCoordinator)
 
         if (savedInstanceState == null) {
             setupBottomNavigation()
@@ -49,7 +49,7 @@ class HomeFlowActivity : ViewBindingActivity<ActivityHomeBinding>() {
 
         val controllerChanges = binding.bottomNavigation.setupWithNavController(navGraphs, supportFragmentManager, R.id.fragment_container, intent)
         controllerChanges.observe(this, Observer {
-            navigator.navigationController = it
+            flowCoordinator.navigationController = it
         })
     }
 }
