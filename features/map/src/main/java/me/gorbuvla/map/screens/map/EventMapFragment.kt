@@ -36,7 +36,7 @@ class EventMapFragment : ViewBindingFragment<FragmentMapBinding>() {
         fun navigate(coordinate: Coordinate)
     }
 
-    private val delegate: NavigationDelegate by flow()
+    private val navigationDelegate: NavigationDelegate by flow()
     private val viewModel: EventMapViewModel by viewModel()
 
     private var googleMap: GoogleMap? = null
@@ -70,8 +70,8 @@ class EventMapFragment : ViewBindingFragment<FragmentMapBinding>() {
             map.applyStyle()
             map.setOnInfoWindowClickListener { marker ->
                 when (val item = marker.tag) {
-                    is MarkerItem.Event -> delegate.open(item.event.event.id)
-                    is MarkerItem.Place -> delegate.navigate(item.place.place.address.location)
+                    is MarkerItem.Event -> navigationDelegate.open(item.event.event.id)
+                    is MarkerItem.Place -> navigationDelegate.navigate(item.place.place.address.location)
                 }
             }
         }

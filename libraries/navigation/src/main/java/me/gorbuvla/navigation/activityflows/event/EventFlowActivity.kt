@@ -30,20 +30,20 @@ internal class EventFlowActivity : ViewBindingActivity<ActivityEventBinding>() {
         intent.extras?.getString(EVENT_ID_KEY) ?: throw IllegalStateException("Event ID not provided for Event Detail Flow")
     }
 
-    private lateinit var navigator: EventFlowCoordinatorImpl
+    private lateinit var flowCoordinator: EventFlowCoordinatorImpl
 
     override fun provideBinding(inflater: LayoutInflater) = ActivityEventBinding.inflate(inflater)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        navigator = flowScope.get()
-        navigator.activity = this
-        navigator.navigationController = findNavController(R.id.fragment_container)
-        lifecycle.addObserver(navigator)
+        flowCoordinator = flowScope.get()
+        flowCoordinator.activity = this
+        flowCoordinator.navigationController = findNavController(R.id.fragment_container)
+        lifecycle.addObserver(flowCoordinator)
 
         if (savedInstanceState == null) {
-            navigator.openInitial(eventId)
+            flowCoordinator.openInitial(eventId)
         }
     }
 

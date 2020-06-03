@@ -18,12 +18,12 @@ class EventListFragment : ViewBindingFragment<FragmentEventListBinding>() {
         fun open(eventId: String)
     }
 
-    private val delegate: NavigationDelegate by flow()
+    private val navigationDelegate: NavigationDelegate by flow()
     private val viewModel: EventListViewModel by viewModel()
     private val controller: EventListEpoxyController by lazy {
         EventListEpoxyController(
             onToggleCategory = { viewModel.toggle(it) },
-            onEventClick = { delegate.open(it.id) }
+            onEventClick = { navigationDelegate.open(it.id) }
         )
     }
 

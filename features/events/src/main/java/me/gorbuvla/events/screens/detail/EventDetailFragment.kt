@@ -40,12 +40,12 @@ class EventDetailFragment : ViewBindingFragment<FragmentEventDetailBinding>() {
         fun open(eventId: String)
     }
 
-    private val delegate: NavigationDelegate by flow()
+    private val navigationDelegate: NavigationDelegate by flow()
     private val viewModel: EventDetailViewModel by viewModel { params(requireArguments()) }
     private val controller: EventDetailEpoxyController by lazy {
         EventDetailEpoxyController(
-            onStartNavigation = { delegate.navigate(it) },
-            onSimilarClick = { delegate.open(it.id) }
+            onStartNavigation = { navigationDelegate.navigate(it) },
+            onSimilarClick = { navigationDelegate.open(it.id) }
         )
     }
 
@@ -59,7 +59,7 @@ class EventDetailFragment : ViewBindingFragment<FragmentEventDetailBinding>() {
     override fun FragmentEventDetailBinding.bindInteraction() {
         recyclerView.adapter = controller.adapter
         toolbar.setNavigationOnClickListener {
-            delegate.navigateUp()
+            navigationDelegate.navigateUp()
         }
     }
 
@@ -82,7 +82,7 @@ class EventDetailFragment : ViewBindingFragment<FragmentEventDetailBinding>() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val event = viewModel.event.value?.event
         if (item.itemId == R.id.open_link && event != null) {
-            delegate.openLink(event.url)
+            navigationDelegate.openLink(event.url)
             return true
         }
 

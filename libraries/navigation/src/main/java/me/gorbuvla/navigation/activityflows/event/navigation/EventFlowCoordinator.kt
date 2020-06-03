@@ -62,7 +62,7 @@ class EventFlowCoordinatorImpl : EventFlowCoordinator {
     override fun navigateUp() {
         if (navigationController?.currentDestination?.id == R.id.event_detail) {
             activity?.let {
-                it.flowScope.close() // TODO: 🤔
+                it.flowScope.close()
                 it.onBackPressed()
             }
         } else {
