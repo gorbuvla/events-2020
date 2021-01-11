@@ -3,13 +3,10 @@ apply from: '../../gradle/common.gradle'
 apply plugin: 'kotlin-kapt'
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
-    implementation "org.koin:koin-android:$koin_version"
-    implementation "com.jakewharton.timber:timber:$timber_version"
+    implementation Dependencies.kotlinStdlib
+    implementation Dependencies.coroutines
+    implementation Dependencies.koin
+    implementation Dependencies.timber
 
-    implementation "com.github.tfcporciuncula:flow-preferences:$flow_preferences_version"
-
-    testImplementation 'junit:junit:4.12'
+    testImplementation Dependencies.junit
 }

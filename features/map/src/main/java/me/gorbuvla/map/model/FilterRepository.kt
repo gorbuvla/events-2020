@@ -11,6 +11,7 @@ import me.gorbuvla.map.model.filters.FilterOption
 import me.gorbuvla.map.model.filters.types.FilterApplicator
 import me.gorbuvla.map.model.filters.types.GeneralFilter
 import me.gorbuvla.map.model.filters.types.filter
+import me.gorbuvla.storage.UserSettings
 
 /**
  * Repository to manage map filters.

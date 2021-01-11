@@ -1,0 +1,16 @@
+apply plugin: 'com.android.library'
+apply from: '../../gradle/common.gradle'
+apply plugin: 'kotlin-kapt'
+
+dependencies {
+    implementation project(":libraries:domain")
+
+    implementation Dependencies.kotlinStdlib
+    implementation Dependencies.coroutines
+    implementation Dependencies.koin
+
+    implementation Dependencies.flowPreferences
+
+    implementation Dependencies.timber
+
+}

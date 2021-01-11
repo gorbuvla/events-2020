@@ -14,20 +14,21 @@ dependencies {
     implementation project(':libraries:domain')
     implementation project(":libraries:ui")
 
-    implementation "org.koin:koin-android:$koin_version"
-    implementation "org.koin:koin-androidx-scope:$koin_version"
-    implementation "org.koin:koin-androidx-viewmodel:$koin_version"
+    implementation Dependencies.kotlinStdlib
+    implementation Dependencies.coroutines
 
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation "androidx.core:core-ktx:1.2.0"
-    implementation "androidx.appcompat:appcompat:1.1.0"
+    implementation Dependencies.koin
+    implementation Dependencies.koinScope
+    implementation Dependencies.koinViewModel
 
-    implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
-    implementation "androidx.navigation:navigation-fragment-ktx:$navigation_version"
-    implementation "androidx.navigation:navigation-ui-ktx:$navigation_version"
+    implementation Dependencies.coreKtx
+    implementation Dependencies.appCompat
 
-    implementation "androidx.browser:browser:$browser_version"
+    implementation Dependencies.lifecycleCommon
+    implementation Dependencies.navigationFragment
+    implementation Dependencies.navigationUI
 
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
-    implementation "com.jakewharton.timber:timber:$timber_version"
+    implementation Dependencies.customTab
+
+    implementation Dependencies.timber
 }

@@ -18,7 +18,7 @@
 
     <fragment
         android:id="@+id/event_detail"
-        android:name="me.gorbuvla.events.screens.detail.EventDetailFragment"
+        android:name="me.gorbuvla.events.scenes.detail.EventDetailFragment"
         tools:layout="@layout/fragment_event_detail">
 
         <action

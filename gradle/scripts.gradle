@@ -1,0 +1,11 @@
+/**
+ * Get count of git commits
+ */
+ext.getGitCommitsCount = {
+    def stdout = new ByteArrayOutputStream()
+    exec {
+        commandLine 'git', 'rev-list', 'HEAD', '--count'
+        standardOutput = stdout
+    }
+    return Integer.parseInt(stdout.toString().trim())
+}

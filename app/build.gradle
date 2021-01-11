@@ -1,22 +1,16 @@
-plugins {
-    id 'com.android.application'
-    id 'kotlin-android'
-    id 'kotlin-android-extensions'
-}
+apply plugin: 'com.android.application'
+apply from: '../gradle/common.gradle'
+apply from: '../gradle/scripts.gradle'
 
 Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
 def googleMapApiKey = properties.getProperty('mapsKey')
 
 android {
-    compileSdkVersion 29
-
     defaultConfig {
         applicationId "me.gorbuvla.missedplaces"
-        minSdkVersion 24
-        targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
+        versionCode getGitCommitsCount()
+        versionName "2.0.2.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -27,13 +21,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = '1.8'
-    }
 }
 
 dependencies {
@@ -41,7 +28,21 @@ dependencies {
     implementation project(':features:events')
     implementation project(":libraries:navigation")
 
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
-    implementation "org.koin:koin-android:$koin_version"
-    implementation "com.jakewharton.timber:timber:$timber_version"
+    implementation Dependencies.kotlinStdlib
+    implementation Dependencies.coroutines
+    implementation Dependencies.coroutinesPlayServices
+    implementation Dependencies.coreKtx
+    implementation Dependencies.appCompat
+    implementation Dependencies.material
+
+    implementation Dependencies.lifecycleCommon
+    implementation Dependencies.lifecycleRuntime
+    implementation Dependencies.lifecycleViewModel
+
+    implementation Dependencies.navigationFragment
+    implementation Dependencies.navigationUI
+
+    implementation Dependencies.koin
+
+    implementation Dependencies.timber
 }
