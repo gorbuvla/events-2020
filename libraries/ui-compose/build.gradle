@@ -1,0 +1,35 @@
+apply plugin: 'com.android.library'
+apply from: '../../gradle/common.gradle'
+
+android {
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerVersion Config.kotlinVersion
+        kotlinCompilerExtensionVersion Config.composeVersion
+    }
+}
+
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
+    kotlinOptions {
+        jvmTarget = "1.8"
+        freeCompilerArgs += ["-Xallow-jvm-ir-dependencies"]
+    }
+}
+
+dependencies {
+    implementation Dependencies.kotlinStdlib
+    implementation Dependencies.coroutines
+    implementation Dependencies.coreKtx
+    implementation Dependencies.appCompat
+    implementation Dependencies.lifecycleViewModel
+
+    implementation Dependencies.composeRuntime
+    implementation Dependencies.composeFramework
+    implementation Dependencies.composeLayout
+    implementation Dependencies.composeMaterial
+    implementation Dependencies.composeTooling
+
+    testImplementation Dependencies.junit
+}

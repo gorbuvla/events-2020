@@ -18,10 +18,12 @@
             <option value="$PROJECT_DIR$/features/map" />
             <option value="$PROJECT_DIR$/libraries" />
             <option value="$PROJECT_DIR$/libraries/api" />
+            <option value="$PROJECT_DIR$/libraries/coordinator" />
             <option value="$PROJECT_DIR$/libraries/domain" />
             <option value="$PROJECT_DIR$/libraries/navigation" />
             <option value="$PROJECT_DIR$/libraries/storage" />
             <option value="$PROJECT_DIR$/libraries/ui" />
+            <option value="$PROJECT_DIR$/libraries/ui-compose" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

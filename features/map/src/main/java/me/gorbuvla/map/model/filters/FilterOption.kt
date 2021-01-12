@@ -1,8 +1,8 @@
 package me.gorbuvla.map.model.filters
 
 import me.gorbuvla.domain.domain.EventType
-import me.gorbuvla.domain.model.settings.Setting
 import me.gorbuvla.map.model.filters.types.GeneralFilter
+import me.gorbuvla.storage.Setting
 import me.gorbuvla.ui.util.Text
 
 /**

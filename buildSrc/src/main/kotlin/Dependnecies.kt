@@ -2,6 +2,7 @@ import org.gradle.api.JavaVersion
 
 object Config {
     const val kotlinVersion = "1.4.21"
+    const val composeVersion = "1.0.0-alpha09"
 
     const val minSdk = 24
     const val compileSdk = 30
@@ -12,6 +13,16 @@ object Config {
 object Dependencies {
 
     const val kotlinStdlib = "org.jetbrains.kotlin:kotlin-stdlib:${Config.kotlinVersion}"
+
+    // Compose
+    private const val composeVersion = "0.1.0-dev10"
+
+    const val composeRuntime = "androidx.compose:compose-runtime:$composeVersion"
+    const val composeFramework = "androidx.ui:ui-framework:$composeVersion"
+    const val composeLayout = "androidx.ui:ui-layout:$composeVersion"
+    const val composeMaterial = "androidx.ui:ui-material:$composeVersion"
+    const val composeTooling = "androidx.ui:ui-tooling:$composeVersion"
+    const val composeLiveData = "androidx.ui:ui-livedata:$composeVersion"
 
     // Android X
     private const val appCompatVersion = "1.3.0-alpha02"
@@ -26,7 +37,7 @@ object Dependencies {
     private const val constraintLayoutVersion = "2.1.0-alpha2"
     const val constraintLayout = "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
 
-    const val customTab = "androidx.browser:browser:1.3.0"
+    const val browser = "androidx.browser:browser:1.3.0"
 
     const val coil = "io.coil-kt:coil:1.1.0"
 
@@ -39,7 +50,7 @@ object Dependencies {
     const val lifecycleLiveData = "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion"
     const val lifecycleProcess = "androidx.lifecycle:lifecycle-process:$lifecycleVersion"
 
-    private const val navigationVersion = "2.3.0"
+    private const val navigationVersion = "2.3.2"
     const val navigationFragment = "androidx.navigation:navigation-fragment-ktx:$navigationVersion"
     const val navigationUI = "androidx.navigation:navigation-ui-ktx:$navigationVersion"
 
@@ -48,14 +59,6 @@ object Dependencies {
 
     private const val viewpager2Version = "1.1.0-alpha01"
     const val viewpager2 = "androidx.viewpager2:viewpager2:$viewpager2Version"
-
-    private const val pageIndicatorVersion = "1.0.3"
-    const val pageIndicator = "com.romandanylyk:pageindicatorview:$pageIndicatorVersion"
-
-    private const val optPinViewVersion = "2.1.0"
-    const val optPinView = "com.github.mukeshsolanki:android-otpview-pinview:$optPinViewVersion"
-
-    const val linkMovementMethod = "me.saket:better-link-movement-method:2.2.0"
 
     private const val coroutinesVersion = "1.4.2"
     const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion"
@@ -81,17 +84,8 @@ object Dependencies {
     const val epoxy = "com.airbnb.android:epoxy:$epoxyVersion"
     const val epoxyProcessor = "com.airbnb.android:epoxy-processor:$epoxyVersion"
 
-    // Lottie
-    private const val lottieVersion = "3.5.0"
-    const val lottie = "com.airbnb.android:lottie:$lottieVersion"
-
-    // Note: do not update unless required, one-time sms verification does not work with newer versions
-    private const val playServicesAuthVersion = "17.0.0"
-    const val playServicesAuth = "com.google.android.gms:play-services-auth:$playServicesAuthVersion"
-    const val playServicesPhoneApi = "com.google.android.gms:play-services-auth-api-phone:17.4.0"
-
     // Room
-    private const val roomVersion = "2.3.0-alpha03"
+    private const val roomVersion = "2.3.0-alpha04"
     const val roomRuntime = "androidx.room:room-runtime:$roomVersion"
     const val roomKtx = "androidx.room:room-ktx:$roomVersion"
     const val roomProcessor = "androidx.room:room-compiler:$roomVersion"
@@ -104,31 +98,10 @@ object Dependencies {
     private const val workVersion = "2.5.0-beta02"
     const val workKtx = "androidx.work:work-runtime-ktx:$workVersion"
 
-    // Firebase
-    const val firebaseAnalytics = "com.google.firebase:firebase-analytics:18.0.0"
-    const val firebaseCrashlytics = "com.google.firebase:firebase-crashlytics:17.3.0"
-    const val firebaseMessaging = "com.google.firebase:firebase-messaging:21.0.0"
-
-    const val firebaseDynamicLinks = "com.google.firebase:firebase-dynamic-links-ktx:19.1.1"
-
-    private const val mlkitVersion = "16.1.1"
-    const val mlkitLanguage = "com.google.mlkit:language-id:$mlkitVersion"
-
     // Networking
     private const val retrofitVersion = "2.9.0"
     const val retrofit = "com.squareup.retrofit2:retrofit:$retrofitVersion"
     const val retrofitConverter = "com.squareup.retrofit2:converter-moshi:$retrofitVersion"
-
-    private const val coroutineAuthVersion = "1.0.1"
-    const val coroutineAuthAdapter = "cz.ackee.ackroutine:coroutine-adapter:$coroutineAuthVersion"
-    const val coroutineAuthManager = "cz.ackee.ackroutine:coroutine-oauth:$coroutineAuthVersion"
-
-    private const val msalVersion = "2.0.4"
-    const val msal = "com.microsoft.identity.client:msal:$msalVersion"
-    const val mask = "com.microsoft.device.display:display-mask:0.3.0"
-
-    private const val socketIOVersion = "1.0.0"
-    const val socketIO = "io.socket:socket.io-client:$socketIOVersion"
 
     // OkHttp
     private const val okhttpVersion = "4.10.0-RC1"
@@ -140,9 +113,6 @@ object Dependencies {
     const val moshi = "com.squareup.moshi:moshi:$moshiVersion"
     const val moshiAdapters = "com.squareup.moshi:moshi-adapters:$moshiVersion"
     const val moshiProcessor = "com.squareup.moshi:moshi-kotlin-codegen:$moshiVersion"
-
-    private const val mixPanelVersion = "5.8.5"
-    const val mixpanel = "com.mixpanel.android:mixpanel-android:$mixPanelVersion"
 
     // Timber
     private const val timberVersion = "4.7.1"

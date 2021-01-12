@@ -1,8 +1,7 @@
 package me.gorbuvla.events.model
 
-import kotlinx.coroutines.delay
+import me.gorbuvla.api.rest.services.EventService
 import me.gorbuvla.domain.domain.Event
-import java.util.concurrent.TimeUnit
 
 /**
  * TODO add class description
@@ -18,21 +17,15 @@ interface EventRepository {
 
 internal class EventRepositoryImpl(private val eventService: EventService) : EventRepository {
 
-
-
     override suspend fun events(): List<Event> {
-        delay(TimeUnit.SECONDS.toMillis(2))
-        return events
+        return eventService.getEvents()
     }
 
     override suspend fun event(id: String): Event {
-        delay(TimeUnit.SECONDS.toMillis(1))
-        return events.first { it.id == id }
+        return eventService.getEvent(id)
     }
 
     override suspend fun similar(eventId: String): List<Event> {
-        delay(TimeUnit.SECONDS.toMillis(1))
-        val event = events.first { it.id == eventId }
-        return events.filter { it.type == event.type && it.id != event.id }
+        return eventService.getSimilar(eventId)
     }
 }

@@ -4,13 +4,12 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.map
 import me.gorbuvla.domain.domain.EventType
-import me.gorbuvla.domain.model.settings.Setting
-import me.gorbuvla.domain.model.settings.SettingsConfig
-import me.gorbuvla.domain.model.settings.UserSettings
 import me.gorbuvla.map.model.filters.FilterOption
 import me.gorbuvla.map.model.filters.types.FilterApplicator
 import me.gorbuvla.map.model.filters.types.GeneralFilter
 import me.gorbuvla.map.model.filters.types.filter
+import me.gorbuvla.storage.Setting
+import me.gorbuvla.storage.SettingsConfig
 import me.gorbuvla.storage.UserSettings
 
 /**
